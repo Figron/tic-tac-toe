@@ -23,12 +23,12 @@ class Game(object):
     def __init__(self):
         super(Game, self).__init__()
 
-    def view_logs():
+    def view_logs(self):
         with open('E:/Labs/Python/Data Engineers/Tictactoe/logs.txt', 'r') as file:
             for line in file:
                 print(line)
 
-    def delete_logs():
+    def delete_logs(self):
         open('E:/Labs/Python/Data Engineers/Tictactoe/logs.txt', 'w').close()
 
     def edit_logs(self, string):
@@ -144,16 +144,13 @@ class Board(object):
 
 
 def main():
-    print("Please select what you would like to do:")
+    choice = int(input("Please select what you would like to do:"))
     print("1: Play a new board")
     print("2: View logs")
     print("3: Delete logs")
     print("4: Exit")
 
     game = Game()
-
-    # choice = int(input())
-    choice = 1
 
     if choice == 1:
         game.init()
